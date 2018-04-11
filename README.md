@@ -6,7 +6,7 @@ Quick start for Spring Boot and Gradle.
 
 [![Build Status](https://travis-ci.org/cristiangreco/spring-boot-boilerplate.svg?branch=master)](https://travis-ci.org/cristiangreco/spring-boot-boilerplate)
 
-## How to build
+### How to build
 
 Build with Gradle wrapper:
 
@@ -14,7 +14,7 @@ Build with Gradle wrapper:
 $ ./gradlew clean build
 ```
 
-## How to run
+### How to run
 
 Run with Gradle wrapper:
 
@@ -28,7 +28,7 @@ Or run it as an executable jar:
 $ java -jar build/libs/spring-boot-boilerplate-0.1.0.jar
 ```
 
-## Testing with Curl
+### Testing with Curl
 
 ```sh
 $ curl http://localhost:8080/product
@@ -36,7 +36,7 @@ $ curl http://localhost:8080/product
 ```
 
 
-##The task
+## The task
 
 Develop a simple web service that allows clients to save and retrieve product details over HTTP.
 
@@ -44,7 +44,7 @@ It should also be possible to retrieve the aisle location of a product in a spec
 
 The client requirements for the API are outlined below.
 
-###Save Product Details
+### Save Product Details
 
 To create a product, the client makes a request that includes:
 ```
@@ -55,7 +55,7 @@ Product description
 
 The service then saves the product details to the file system, and returns the full product details in the response
 
-###Retrieve Product Details
+### Retrieve Product Details
 
 To retrieve product details, the client makes a request that includes:
 ```
@@ -70,7 +70,7 @@ Product description
 ```
 
 
-###Retrieve Product Details with Aisle Location
+### Retrieve Product Details with Aisle Location
 
 To retrieve aisle location along with product details, the client makes a request that includes:
 ```
