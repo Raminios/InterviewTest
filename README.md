@@ -1,10 +1,6 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 # Kingfisher backend interview test
- 
-Quick start for Spring Boot and Gradle.
-
-[![Build Status](https://travis-ci.org/cristiangreco/spring-boot-boilerplate.svg?branch=master)](https://travis-ci.org/cristiangreco/spring-boot-boilerplate)
 
 ### How to build
 
@@ -32,7 +28,7 @@ $ java -jar build/libs/spring-boot-boilerplate-0.1.0.jar
 
 ```sh
 $ curl http://localhost:8080/product
-{"product_number":null,"product_name":"name","product_description":null}
+{"product_name":"name","product_description":"description"}
 ```
 
 

@@ -21,6 +21,7 @@ public class ProductManager {
         AisleLocations aisleLocations = aisleLocationManager.getAisleLocations();
         ProductResponse productResponse = new ProductResponse();
         productResponse.setProductName("name");
+        productResponse.setProductDescription("description");
         return productResponse;
     }
 }

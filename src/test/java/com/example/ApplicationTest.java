@@ -26,5 +26,6 @@ public class ApplicationTest {
 
         ProductResponse product = response.getBody();
         assertThat(product.getProductName()).isEqualTo("name");
+        assertThat(product.getProductDescription()).isEqualTo("description");
     }
 }
