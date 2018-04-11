@@ -4,6 +4,6 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Products {
-    private List<Product> products;
+public class AisleLocations {
+    private List<AisleLocation> aisleLocations;
 }

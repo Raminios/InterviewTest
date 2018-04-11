@@ -1,20 +1,26 @@
 package com.example.engine;
 
-import com.example.model.Products;
+import com.example.model.AisleLocations;
+import com.example.model.ProductResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ProductManager {
 
-    private UpstreamProduct upstreamProduct;
+    private AisleLocationManager aisleLocationManager;
+
     @Autowired
-    public ProductManager(UpstreamProduct upstreamProduct) {
-        this.upstreamProduct = upstreamProduct;
+    public ProductManager(AisleLocationManager aisleLocationManager) {
+        this.aisleLocationManager = aisleLocationManager;
     }
 
-    public Products getProducts() {
+    public ProductResponse createProductsResponse() {
         // TODO: put your code
-        return upstreamProduct.readFile();
+
+        AisleLocations aisleLocations = aisleLocationManager.getAisleLocations();
+        ProductResponse productResponse = new ProductResponse();
+        productResponse.setProductName("name");
+        return productResponse;
     }
 }

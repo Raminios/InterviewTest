@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.engine.ProductManager;
-import com.example.model.Products;
+import com.example.model.ProductResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +20,8 @@ public class ProductController {
     }
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Products getProduct() {
-        return productManager.getProducts();
+    public ProductResponse getProduct() {
+        return productManager.createProductsResponse();
     }
 
 }
