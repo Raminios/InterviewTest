@@ -1,12 +1,13 @@
 package com.example.utils;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.File;
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
-import java.io.IOException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Component
 public class Serializer {
@@ -24,6 +25,16 @@ public class Serializer {
             throw new RuntimeException("Error serialising " + response);
         }
     }
+    
+    public <T> boolean toJsonFile(T response, File string) {
+    	
+		try {
+			objectMapper.writeValue(string, response);
+			return true;
+		} catch (IOException e1) {
+            throw new RuntimeException("Error serialising " + response);
+		}
+    }
 
     public <T> T fromJsonString(String string, Class<T> dataType) {
         try {
@@ -38,6 +49,7 @@ public class Serializer {
             T t = objectMapper.readValue(string, dataType);
             return t;
         } catch (IOException e) {
+            System.out.println(e);
             throw new RuntimeException("Error deserializing " + string);
         }
     }

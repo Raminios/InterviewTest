@@ -1,0 +1,43 @@
+{"products": [
+  {
+    "product_number": "123",
+    "store_id": "1",
+    "aisle_location": "A1"
+  },
+  {
+    "product_number": "124",
+    "store_id": "1",
+    "aisle_location": "B2"
+  },
+  {
+    "product_number": "123",
+    "store_id": "2",
+    "aisle_location": "B1"
+  },
+  {
+    "product_number": "124",
+    "store_id": "2",
+    "aisle_location": "B1"
+  },
+  {
+    "product_number": "123",
+    "store_id": "3",
+    "aisle_location": "F25"
+  },
+  {
+    "product_number": "124",
+    "store_id": "3",
+    "aisle_location": "J9"
+  },
+  {
+    "product_number": "123",
+    "store_id": "4",
+    "aisle_location": "A4"
+  },
+  {
+    "product_number": "124",
+    "store_id": "5",
+    "aisle_location": "A2"
+  }
+]
+}
